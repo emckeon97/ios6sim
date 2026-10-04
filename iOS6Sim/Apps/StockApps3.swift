@@ -1,4 +1,5 @@
 import SwiftUI
+import Combine
 
 // MARK: - Shared helpers (prefixed S3 to avoid collisions)
 
