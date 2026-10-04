@@ -71,7 +71,7 @@ w("\tobjects = {")
 # --- PBXFileReference ---
 w("/* Begin PBXFileReference section */")
 w(f"\t\t{PID_APP_REF} /* iOS 6.app */ = {{isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = \"iOS 6.app\"; sourceTree = BUILT_PRODUCTS_DIR; }};")
-w(f"\t\t{PID_PLIST_REF} /* Info.plist */ = {{isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = \"iOS6Sim/Info.plist\"; sourceTree = \"<group>\"; }};")
+w(f"\t\t{PID_PLIST_REF} /* Info.plist */ = {{isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = \"<group>\"; }};")
 for f in SWIFT_FILES:
     name = os.path.basename(f)
     w(f"\t\t{file_ids[f]} /* {name} */ = {{isa = PBXFileReference; explicitFileType = sourcecode.swift; path = \"{name}\"; sourceTree = \"<group>\"; }};")
@@ -269,6 +269,7 @@ w("/* End XCConfigurationList section */")
 w("")
 
 w("\trootObject = " + PID_PROJECT + " /* Project object */;")
+w("}")
 w("}")
 
 out = os.path.join(SRC, "iOS6Sim.xcodeproj", "project.pbxproj")
