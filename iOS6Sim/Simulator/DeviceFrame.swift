@@ -51,7 +51,7 @@ struct DeviceFrame: View {
                                         .stroke(Color.black, lineWidth: 2 * scale))
 
                             // Home button (circular, like the real iPhone).
-                            Button { sim.goHome() } label: {
+                            Button { sim.homeButtonTap() } label: {
                                 ZStack {
                                     Circle()
                                         .fill(Color(red: 0.10, green: 0.10, blue: 0.11))
@@ -106,7 +106,7 @@ struct FullscreenSimView: View {
                     // Bottom black area with visible home button.
                     ZStack {
                         Color.black
-                        Button { sim.goHome() } label: {
+                        Button { sim.homeButtonTap() } label: {
                             ZStack {
                                 Circle()
                                     .fill(Color(red: 0.12, green: 0.12, blue: 0.13))
@@ -162,6 +162,10 @@ struct AppHost: View {
     var body: some View {
         VStack(spacing: 0) {
             switch app {
+            case .phone: PhoneApp()
+            case .mail: MailApp()
+            case .safari: SafariApp()
+            case .music: MusicApp()
             case .notes: NotesApp()
             case .calculator: CalculatorApp()
             case .clock: ClockApp()
@@ -170,6 +174,19 @@ struct AppHost: View {
             case .photos: PhotosApp()
             case .messages: MessagesApp()
             case .reminders: RemindersApp()
+            case .calendar: CalendarApp()
+            case .camera: CameraApp()
+            case .maps: MapsApp()
+            case .stocks: StocksApp()
+            case .newsstand: NewsstandApp()
+            case .itunes: iTunesApp()
+            case .appstore: AppStoreApp()
+            case .gamecenter: GameCenterApp()
+            case .youtube: YouTubeApp()
+            case .passbook: PassbookApp()
+            case .compass: CompassApp()
+            case .evasi0n: Evasi0nApp()
+            case .cydia: CydiaApp()
             }
         }
     }
