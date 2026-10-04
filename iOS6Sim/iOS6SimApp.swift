@@ -9,7 +9,5 @@ struct iOS6SimApp: App {
             DeviceFrame()
                 .environmentObject(sim)
         }
-        .windowStyle(.hiddenTitleBar)
-        .windowResizability(.contentSize)
     }
 }
