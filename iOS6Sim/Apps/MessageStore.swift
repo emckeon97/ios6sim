@@ -1,5 +1,7 @@
 import Foundation
+#if os(macOS)
 import SQLite3
+#endif
 
 /// A single chat message from the Mac's Messages database.
 struct SimChatMessage: Identifiable {
@@ -21,27 +23,42 @@ struct SimConversation: Identifiable {
 /// Reads the Mac's iMessage/SMS database (~/Library/Messages/chat.db).
 /// Everything happens on-device at runtime — messages are never copied,
 /// uploaded, or logged anywhere. Requires Full Disk Access.
+/// On iOS, apps are sandboxed and cannot access messages.
 final class MessageStore: ObservableObject {
     @Published var conversations: [SimConversation] = []
     @Published var hasAccess = false
     @Published var needsPermission = false
+    /// True on iOS where chat.db is unreachable (app sandbox).
+    @Published var unavailableOnDevice = false
 
+    #if os(macOS)
     private var db: OpaquePointer?
 
     private var dbPath: String {
         (NSHomeDirectory() as NSString).appendingPathComponent("Library/Messages/chat.db")
     }
+    #endif
 
     init() {
+        #if os(iOS)
+        unavailableOnDevice = true
+        #else
         openDatabase()
+        #endif
     }
 
+    #if os(macOS)
     deinit {
         if let db { sqlite3_close(db) }
     }
+    #endif
 
     /// Try to open the database. Sets hasAccess / needsPermission.
     func openDatabase() {
+        #if os(iOS)
+        unavailableOnDevice = true
+        return
+        #else
         closeDatabase()
         // Quick readability check — fails without Full Disk Access.
         guard FileManager.default.isReadableFile(atPath: dbPath) else {
@@ -60,17 +77,23 @@ final class MessageStore: ObservableObject {
             hasAccess = false
             needsPermission = true
         }
+        #endif
     }
 
     func refresh() {
+        #if os(macOS)
         if hasAccess { loadConversations() } else { openDatabase() }
+        #endif
     }
 
+    #if os(macOS)
     private func closeDatabase() {
         if let db { sqlite3_close(db) }
         db = nil
     }
+    #endif
 
+    #if os(macOS)
     // MARK: - Queries
 
     private func loadConversations() {
@@ -170,4 +193,5 @@ final class MessageStore: ObservableObject {
         let oneLine = text.components(separatedBy: .newlines).first ?? ""
         return oneLine.count > 60 ? String(oneLine.prefix(60)) + "…" : oneLine
     }
+    #endif
 }
