@@ -33,7 +33,7 @@ struct HomeScreen: View {
                 .rotation3DEffect(.degrees(cube), axis: (x: 0, y: 1, z: 0), perspective: 0.6)
                 .rotation3DEffect(.degrees(flip), axis: (x: 1, y: 0, z: 0), perspective: 0.6)
                 .opacity(pageFade)
-                .onChange(of: page) { _ in
+                .onChange(of: page) {
                     guard let effect = sim.pageEffectName else { return }
                     switch effect {
                     case "cube":
