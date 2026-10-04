@@ -50,14 +50,14 @@ struct DeviceFrame: View {
                                     RoundedRectangle(cornerRadius: 4 * scale)
                                         .stroke(Color.black, lineWidth: 2 * scale))
 
-                            // Home button.
+                            // Home button (circular, like the real iPhone).
                             Button { sim.goHome() } label: {
                                 ZStack {
-                                    RoundedRectangle(cornerRadius: 12 * scale, style: .continuous)
+                                    Circle()
                                         .fill(Color(red: 0.10, green: 0.10, blue: 0.11))
                                         .frame(width: 56 * scale, height: 56 * scale)
                                         .overlay(
-                                            RoundedRectangle(cornerRadius: 12 * scale, style: .continuous)
+                                            Circle()
                                                 .stroke(Color.gray.opacity(0.35), lineWidth: 1.5))
                                     RoundedRectangle(cornerRadius: 4 * scale)
                                         .stroke(Color.gray.opacity(0.6), lineWidth: 2 * scale)
@@ -66,14 +66,12 @@ struct DeviceFrame: View {
                             }
                             .buttonStyle(.plain)
                             .frame(height: 76 * scale)
-                            .help("Home")
                         }
                     }
                     Spacer(minLength: 0)
                 }
             }
         }
-        .frame(minWidth: 440, minHeight: 760)
     }
 }
 
