@@ -75,9 +75,9 @@ struct DeviceFrame: View {
     }
 }
 
-/// Fullscreen iOS 6 experience — true black, no bezel, indistinguishable
-/// from the real thing. The simulated 320×568 screen scales to fill the
-/// display width; tapping the bottom black area goes home.
+/// Fullscreen iOS 6 experience — true black, iPhone 5 layout.
+/// The simulated 320×568 screen fills the width; bottom black area
+/// holds a visible circular home button, like the real iPhone.
 struct FullscreenSimView: View {
     @EnvironmentObject var sim: SimulatorState
 
@@ -85,14 +85,15 @@ struct FullscreenSimView: View {
         GeometryReader { geo in
             let scale = geo.size.width / 320
             let contentHeight = 568 * scale
-            let topInset = max(0, (geo.size.height - contentHeight) / 2)
+            // Top inset for Dynamic Island / notch area.
+            let topInset: CGFloat = 28
             ZStack {
                 // True black — blends into the OLED display.
                 Color.black
                     .ignoresSafeArea()
 
                 VStack(spacing: 0) {
-                    // Top black bar (invisible on OLED).
+                    // Top black bar.
                     Color.black
                         .frame(height: topInset)
 
@@ -102,11 +103,25 @@ struct FullscreenSimView: View {
                         .scaleEffect(scale, anchor: .top)
                         .frame(width: geo.size.width, height: contentHeight)
 
-                    // Bottom black bar — tap to go home (invisible home button).
-                    Color.black
-                        .frame(maxHeight: .infinity)
-                        .contentShape(Rectangle())
-                        .onTapGesture { sim.goHome() }
+                    // Bottom black area with visible home button.
+                    ZStack {
+                        Color.black
+                        Button { sim.goHome() } label: {
+                            ZStack {
+                                Circle()
+                                    .fill(Color(red: 0.12, green: 0.12, blue: 0.13))
+                                    .frame(width: 58, height: 58)
+                                    .overlay(
+                                        Circle()
+                                            .stroke(Color.gray.opacity(0.4), lineWidth: 1.5))
+                                RoundedRectangle(cornerRadius: 5)
+                                    .stroke(Color.gray.opacity(0.65), lineWidth: 2)
+                                    .frame(width: 22, height: 22)
+                            }
+                        }
+                        .buttonStyle(.plain)
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
                 .ignoresSafeArea()
             }
