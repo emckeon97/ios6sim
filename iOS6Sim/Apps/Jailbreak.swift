@@ -155,7 +155,7 @@ struct Evasi0nApp: View {
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(8)
-                    .onChange(of: bootLines.count) { _ in
+                    .onChange(of: bootLines.count) {
                         proxy.scrollTo(bootLines.count - 1, anchor: .bottom)
                     }
                 }
