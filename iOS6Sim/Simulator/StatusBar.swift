@@ -2,6 +2,7 @@ import SwiftUI
 
 /// Classic iOS 6 status bar: carrier, signal, time, battery.
 struct iOS6StatusBar: View {
+    @EnvironmentObject var sim: SimulatorState
     var darkText = false
 
     var body: some View {
@@ -14,7 +15,7 @@ struct iOS6StatusBar: View {
                         .frame(width: 3, height: 4 + CGFloat(i) * 2.5)
                 }
             }
-            Text("Carrier")
+            Text(sim.customCarrier ?? "Carrier")
                 .font(.system(size: 11, weight: .semibold))
                 .foregroundColor(barColor)
 
