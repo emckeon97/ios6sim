@@ -75,6 +75,48 @@ struct DeviceFrame: View {
     }
 }
 
+/// Fullscreen iOS 6 experience — true black, no bezel, indistinguishable
+/// from the real thing. The simulated 320×568 screen scales to fill the
+/// display width; tapping the bottom black area goes home.
+struct FullscreenSimView: View {
+    @EnvironmentObject var sim: SimulatorState
+
+    var body: some View {
+        GeometryReader { geo in
+            let scale = geo.size.width / 320
+            let contentHeight = 568 * scale
+            let topInset = max(0, (geo.size.height - contentHeight) / 2)
+            ZStack {
+                // True black — blends into the OLED display.
+                Color.black
+                    .ignoresSafeArea()
+
+                VStack(spacing: 0) {
+                    // Top black bar (invisible on OLED).
+                    Color.black
+                        .frame(height: topInset)
+
+                    // The simulated iOS 6 screen, scaled to fill width.
+                    ScreenHost()
+                        .frame(width: 320, height: 568)
+                        .scaleEffect(scale, anchor: .top)
+                        .frame(width: geo.size.width, height: contentHeight)
+
+                    // Bottom black bar — tap to go home (invisible home button).
+                    Color.black
+                        .frame(maxHeight: .infinity)
+                        .contentShape(Rectangle())
+                        .onTapGesture { sim.goHome() }
+                }
+                .ignoresSafeArea()
+            }
+        }
+        .ignoresSafeArea()
+        .statusBar(hidden: true)
+        .persistentSystemOverlays(.hidden)
+    }
+}
+
 /// Routes the simulated screen: lock → home → app.
 struct ScreenHost: View {
     @EnvironmentObject var sim: SimulatorState
