@@ -478,7 +478,7 @@ struct iTunesApp: View {
             HStack {
                 Image(systemName: "magnifyingglass").foregroundColor(.gray)
                 TextField("Search Store", text: $searchText)
-                    .font(.system(size: 15)
+                    .font(.system(size: 15))
             }
             .padding(8)
             .background(Color(white: 0.94))
@@ -768,7 +768,7 @@ struct AppStoreApp: View {
             HStack {
                 Image(systemName: "magnifyingglass").foregroundColor(.gray)
                 TextField("Search App Store", text: $searchText)
-                    .font(.system(size: 15)
+                    .font(.system(size: 15))
             }
             .padding(8)
             .background(Color(white: 0.94))
