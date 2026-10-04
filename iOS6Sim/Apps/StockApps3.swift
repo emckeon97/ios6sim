@@ -222,7 +222,7 @@ struct NewsstandApp: View {
                                                          startPoint: .top, endPoint: .bottom))
                             .buttonStyle(.plain)
                     )
-                )
+                ))
                 ZStack {
                     // Wooden bookshelf background.
                     LinearGradient(colors: [Color(red: 0.36, green: 0.21, blue: 0.10),
