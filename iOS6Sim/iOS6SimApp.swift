@@ -6,7 +6,7 @@ struct iOS6SimApp: App {
 
     var body: some Scene {
         WindowGroup {
-            DeviceFrame()
+            FullscreenSimView()
                 .environmentObject(sim)
         }
     }
