@@ -45,11 +45,15 @@ struct iOS6StatusBar: View {
         .padding(.horizontal, 8)
         .frame(height: 20)
         .background(
-            darkText
-                ? Color.clear
-                : LinearGradient(
-                    colors: [Color.black.opacity(0.25), Color.clear],
-                    startPoint: .top, endPoint: .bottom)
+            Group {
+                if darkText {
+                    Color.clear
+                } else {
+                    LinearGradient(
+                        colors: [Color.black.opacity(0.25), Color.clear],
+                        startPoint: .top, endPoint: .bottom)
+                }
+            }
         )
     }
 
