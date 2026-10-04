@@ -16,15 +16,21 @@
 		00000000000000000000006E /* LockScreen.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "LockScreen.swift"; sourceTree = "<group>"; };
 		000000000000000000000070 /* HomeScreen.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "HomeScreen.swift"; sourceTree = "<group>"; };
 		000000000000000000000072 /* DeviceFrame.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "DeviceFrame.swift"; sourceTree = "<group>"; };
-		000000000000000000000074 /* NotesApp.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "NotesApp.swift"; sourceTree = "<group>"; };
-		000000000000000000000076 /* CalculatorApp.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "CalculatorApp.swift"; sourceTree = "<group>"; };
-		000000000000000000000078 /* ClockApp.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "ClockApp.swift"; sourceTree = "<group>"; };
-		00000000000000000000007A /* WeatherApp.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "WeatherApp.swift"; sourceTree = "<group>"; };
-		00000000000000000000007C /* SettingsApp.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "SettingsApp.swift"; sourceTree = "<group>"; };
-		00000000000000000000007E /* PhotosApp.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "PhotosApp.swift"; sourceTree = "<group>"; };
-		000000000000000000000080 /* RemindersApp.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "RemindersApp.swift"; sourceTree = "<group>"; };
-		000000000000000000000082 /* MessageStore.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "MessageStore.swift"; sourceTree = "<group>"; };
-		000000000000000000000084 /* MessagesApp.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "MessagesApp.swift"; sourceTree = "<group>"; };
+		000000000000000000000074 /* iOS6UI.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "iOS6UI.swift"; sourceTree = "<group>"; };
+		000000000000000000000076 /* NotesApp.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "NotesApp.swift"; sourceTree = "<group>"; };
+		000000000000000000000078 /* CalculatorApp.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "CalculatorApp.swift"; sourceTree = "<group>"; };
+		00000000000000000000007A /* ClockApp.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "ClockApp.swift"; sourceTree = "<group>"; };
+		00000000000000000000007C /* WeatherApp.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "WeatherApp.swift"; sourceTree = "<group>"; };
+		00000000000000000000007E /* SettingsApp.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "SettingsApp.swift"; sourceTree = "<group>"; };
+		000000000000000000000080 /* PhotosApp.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "PhotosApp.swift"; sourceTree = "<group>"; };
+		000000000000000000000082 /* RemindersApp.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "RemindersApp.swift"; sourceTree = "<group>"; };
+		000000000000000000000084 /* StockApps1.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "StockApps1.swift"; sourceTree = "<group>"; };
+		000000000000000000000086 /* StockApps2.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "StockApps2.swift"; sourceTree = "<group>"; };
+		000000000000000000000088 /* StockApps3.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "StockApps3.swift"; sourceTree = "<group>"; };
+		00000000000000000000008A /* StockApps4.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "StockApps4.swift"; sourceTree = "<group>"; };
+		00000000000000000000008C /* Jailbreak.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "Jailbreak.swift"; sourceTree = "<group>"; };
+		00000000000000000000008E /* MessageStore.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "MessageStore.swift"; sourceTree = "<group>"; };
+		000000000000000000000090 /* MessagesApp.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "MessagesApp.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -65,6 +71,7 @@
 				00000000000000000000006E /* LockScreen.swift */,
 				000000000000000000000070 /* HomeScreen.swift */,
 				000000000000000000000072 /* DeviceFrame.swift */,
+				000000000000000000000074 /* iOS6UI.swift */,
 			);
 			path = Simulator;
 			sourceTree = "<group>";
@@ -72,15 +79,20 @@
 		00000000000000000000000D /* Apps */ = {
 			isa = PBXGroup;
 			children = (
-				000000000000000000000074 /* NotesApp.swift */,
-				000000000000000000000076 /* CalculatorApp.swift */,
-				000000000000000000000078 /* ClockApp.swift */,
-				00000000000000000000007A /* WeatherApp.swift */,
-				00000000000000000000007C /* SettingsApp.swift */,
-				00000000000000000000007E /* PhotosApp.swift */,
-				000000000000000000000080 /* RemindersApp.swift */,
-				000000000000000000000082 /* MessageStore.swift */,
-				000000000000000000000084 /* MessagesApp.swift */,
+				000000000000000000000076 /* NotesApp.swift */,
+				000000000000000000000078 /* CalculatorApp.swift */,
+				00000000000000000000007A /* ClockApp.swift */,
+				00000000000000000000007C /* WeatherApp.swift */,
+				00000000000000000000007E /* SettingsApp.swift */,
+				000000000000000000000080 /* PhotosApp.swift */,
+				000000000000000000000082 /* RemindersApp.swift */,
+				000000000000000000000084 /* StockApps1.swift */,
+				000000000000000000000086 /* StockApps2.swift */,
+				000000000000000000000088 /* StockApps3.swift */,
+				00000000000000000000008A /* StockApps4.swift */,
+				00000000000000000000008C /* Jailbreak.swift */,
+				00000000000000000000008E /* MessageStore.swift */,
+				000000000000000000000090 /* MessagesApp.swift */,
 			);
 			path = Apps;
 			sourceTree = "<group>";
@@ -140,15 +152,21 @@
 				00000000000000000000006F /* LockScreen.swift in Sources */,
 				000000000000000000000071 /* HomeScreen.swift in Sources */,
 				000000000000000000000073 /* DeviceFrame.swift in Sources */,
-				000000000000000000000075 /* NotesApp.swift in Sources */,
-				000000000000000000000077 /* CalculatorApp.swift in Sources */,
-				000000000000000000000079 /* ClockApp.swift in Sources */,
-				00000000000000000000007B /* WeatherApp.swift in Sources */,
-				00000000000000000000007D /* SettingsApp.swift in Sources */,
-				00000000000000000000007F /* PhotosApp.swift in Sources */,
-				000000000000000000000081 /* RemindersApp.swift in Sources */,
-				000000000000000000000083 /* MessageStore.swift in Sources */,
-				000000000000000000000085 /* MessagesApp.swift in Sources */,
+				000000000000000000000075 /* iOS6UI.swift in Sources */,
+				000000000000000000000077 /* NotesApp.swift in Sources */,
+				000000000000000000000079 /* CalculatorApp.swift in Sources */,
+				00000000000000000000007B /* ClockApp.swift in Sources */,
+				00000000000000000000007D /* WeatherApp.swift in Sources */,
+				00000000000000000000007F /* SettingsApp.swift in Sources */,
+				000000000000000000000081 /* PhotosApp.swift in Sources */,
+				000000000000000000000083 /* RemindersApp.swift in Sources */,
+				000000000000000000000085 /* StockApps1.swift in Sources */,
+				000000000000000000000087 /* StockApps2.swift in Sources */,
+				000000000000000000000089 /* StockApps3.swift in Sources */,
+				00000000000000000000008B /* StockApps4.swift in Sources */,
+				00000000000000000000008D /* Jailbreak.swift in Sources */,
+				00000000000000000000008F /* MessageStore.swift in Sources */,
+				000000000000000000000091 /* MessagesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,15 +201,21 @@
 		00000000000000000000006F /* LockScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000006E /* LockScreen.swift */; };
 		000000000000000000000071 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000070 /* HomeScreen.swift */; };
 		000000000000000000000073 /* DeviceFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000072 /* DeviceFrame.swift */; };
-		000000000000000000000075 /* NotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000074 /* NotesApp.swift */; };
-		000000000000000000000077 /* CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000076 /* CalculatorApp.swift */; };
-		000000000000000000000079 /* ClockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000078 /* ClockApp.swift */; };
-		00000000000000000000007B /* WeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000007A /* WeatherApp.swift */; };
-		00000000000000000000007D /* SettingsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000007C /* SettingsApp.swift */; };
-		00000000000000000000007F /* PhotosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000007E /* PhotosApp.swift */; };
-		000000000000000000000081 /* RemindersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000080 /* RemindersApp.swift */; };
-		000000000000000000000083 /* MessageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000082 /* MessageStore.swift */; };
-		000000000000000000000085 /* MessagesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000084 /* MessagesApp.swift */; };
+		000000000000000000000075 /* iOS6UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000074 /* iOS6UI.swift */; };
+		000000000000000000000077 /* NotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000076 /* NotesApp.swift */; };
+		000000000000000000000079 /* CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000078 /* CalculatorApp.swift */; };
+		00000000000000000000007B /* ClockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000007A /* ClockApp.swift */; };
+		00000000000000000000007D /* WeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000007C /* WeatherApp.swift */; };
+		00000000000000000000007F /* SettingsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000007E /* SettingsApp.swift */; };
+		000000000000000000000081 /* PhotosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000080 /* PhotosApp.swift */; };
+		000000000000000000000083 /* RemindersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000082 /* RemindersApp.swift */; };
+		000000000000000000000085 /* StockApps1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000084 /* StockApps1.swift */; };
+		000000000000000000000087 /* StockApps2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000086 /* StockApps2.swift */; };
+		000000000000000000000089 /* StockApps3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000088 /* StockApps3.swift */; };
+		00000000000000000000008B /* StockApps4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000008A /* StockApps4.swift */; };
+		00000000000000000000008D /* Jailbreak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000008C /* Jailbreak.swift */; };
+		00000000000000000000008F /* MessageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000008E /* MessageStore.swift */; };
+		000000000000000000000091 /* MessagesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000090 /* MessagesApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin XCBuildConfiguration section */
