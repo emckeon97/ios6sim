@@ -13,7 +13,18 @@ struct MessagesApp: View {
                 iOS6NavBar(title: "Messages")
                 ZStack {
                     Color.white.ignoresSafeArea()
-                    if store.needsPermission {
+                    if store.unavailableOnDevice {
+                        VStack(spacing: 8) {
+                            Text("Not Available on iPhone")
+                                .font(.system(size: 18, weight: .medium))
+                                .foregroundColor(.gray)
+                            Text("iOS apps can't access your messages. Use the Mac version to see your real threads.")
+                                .font(.system(size: 13))
+                                .foregroundColor(.gray.opacity(0.8))
+                                .multilineTextAlignment(.center)
+                                .padding(.horizontal, 32)
+                        }
+                    } else if store.needsPermission {
                         permissionView
                     } else if store.conversations.isEmpty {
                         VStack(spacing: 8) {
