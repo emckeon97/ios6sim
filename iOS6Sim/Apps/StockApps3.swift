@@ -38,7 +38,8 @@ private struct S3PriceButton: View {
             .background(
                 RoundedRectangle(cornerRadius: 6)
                     .fill(state == .bought
-                          ? Color(white: 0.92)
+                          ? LinearGradient(colors: [Color(white: 0.92)],
+                                           startPoint: .top, endPoint: .bottom)
                           : LinearGradient(colors: [Color(red: 0.35, green: 0.60, blue: 0.95),
                                                     Color(red: 0.15, green: 0.40, blue: 0.80)],
                                            startPoint: .top, endPoint: .bottom))
