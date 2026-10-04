@@ -7,7 +7,7 @@
 	objects = {
 /* Begin PBXFileReference section */
 		000000000000000000000011 /* iOS 6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS 6.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		000000000000000000000012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOS6Sim/Info.plist"; sourceTree = "<group>"; };
+		000000000000000000000012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		000000000000000000000064 /* iOS6SimApp.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "iOS6SimApp.swift"; sourceTree = "<group>"; };
 		000000000000000000000066 /* SimulatorState.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "SimulatorState.swift"; sourceTree = "<group>"; };
 		000000000000000000000068 /* Wallpapers.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "Wallpapers.swift"; sourceTree = "<group>"; };
@@ -262,4 +262,5 @@
 /* End XCConfigurationList section */
 
 	rootObject = 000000000000000000000001 /* Project object */;
+}
 }
