@@ -35,42 +35,51 @@ struct WeatherApp: View {
                     .ignoresSafeArea()
                 VStack(spacing: 6) {
                     // City pager.
-                    TabView(selection: $cityIndex) {
-                        ForEach(0..<cities.count, id: \.self) { i in
-                            VStack(spacing: 4) {
-                                Text(cities[i])
+                    VStack(spacing: 4) {
+                        Text(cities[cityIndex])
                                     .font(.system(size: 26, weight: .light))
                                     .foregroundColor(.white)
-                                Text("\(temps[i])°")
+                                Text("\(temps[cityIndex])°")
                                     .font(.system(size: 92, weight: .ultraLight))
                                     .foregroundColor(.white)
-                                Text(conditions[i])
+                                Text(conditions[cityIndex])
                                     .font(.system(size: 17))
                                     .foregroundColor(.white.opacity(0.9))
-                                Image(systemName: icons[i])
+                                Image(systemName: icons[cityIndex])
                                     .font(.system(size: 54))
                                     .foregroundColor(.white)
                                     .padding(.top, 8)
                                 HStack(spacing: 24) {
-                                    Label("H:\(temps[i] + 3)°", systemImage: "arrow.up")
-                                    Label("L:\(temps[i] - 9)°", systemImage: "arrow.down")
+                                    Label("H:\(temps[cityIndex] + 3)°", systemImage: "arrow.up")
+                                    Label("L:\(temps[cityIndex] - 9)°", systemImage: "arrow.down")
                                 }
                                 .font(.system(size: 15))
                                 .foregroundColor(.white.opacity(0.85))
                                 .padding(.top, 6)
                             }
-                            .tag(i)
-                        }
-                    }
-                    .tabViewStyle(.page(indexDisplayMode: .never))
                     .frame(height: 330)
+                    .gesture(
+                        DragGesture()
+                            .onEnded { value in
+                                if value.translation.width < -50 {
+                                    cityIndex = min(cityIndex + 1, cities.count - 1)
+                                } else if value.translation.width > 50 {
+                                    cityIndex = max(cityIndex - 1, 0)
+                                }
+                            }
+                    )
 
                     // Page dots.
                     HStack(spacing: 6) {
                         ForEach(0..<cities.count, id: \.self) { i in
-                            Circle()
-                                .fill(i == cityIndex ? Color.white : Color.white.opacity(0.4))
-                                .frame(width: 6, height: 6)
+                            Button {
+                                cityIndex = i
+                            } label: {
+                                Circle()
+                                    .fill(i == cityIndex ? Color.white : Color.white.opacity(0.4))
+                                    .frame(width: 6, height: 6)
+                            }
+                            .buttonStyle(.plain)
                         }
                     }
 
