@@ -105,7 +105,8 @@ struct iOS6Segmented<Value: Hashable>: View {
                                 ? LinearGradient(colors: [Color(red: 0.25, green: 0.50, blue: 0.90),
                                                           Color(red: 0.15, green: 0.35, blue: 0.75)],
                                                  startPoint: .top, endPoint: .bottom)
-                                : Color.clear
+                                : LinearGradient(colors: [Color.clear],
+                                                 startPoint: .top, endPoint: .bottom)
                         )
                 }
                 .buttonStyle(.plain)
