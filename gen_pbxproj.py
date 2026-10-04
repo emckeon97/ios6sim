@@ -228,6 +228,7 @@ def config(pid, name, is_target, debug):
         w("\t\t\t\tSWIFT_VERSION = 5.0;")
         w("\t\t\t\tMACOSX_DEPLOYMENT_TARGET = 14.0;")
         w("\t\t\t\tCODE_SIGN_STYLE = Automatic;")
+        w("\t\t\t\tALWAYS_SEARCH_USER_PATHS = NO;")
         w("\t\t\t\tASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;")
         if debug:
             w("\t\t\t\tSWIFT_OPTIMIZATION_LEVEL = \"-Onone\";")
