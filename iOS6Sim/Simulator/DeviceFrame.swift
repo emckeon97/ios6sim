@@ -75,33 +75,40 @@ struct DeviceFrame: View {
     }
 }
 
-/// Fullscreen iOS 6 experience — true black, iPhone 5 layout.
-/// The simulated 320×568 screen fills the width; bottom black area
-/// holds a visible circular home button, like the real iPhone.
+/// Fullscreen iOS 6 experience, tuned for iPhone 16e (390×844 pt).
+/// The 320×568 simulated screen is scaled to fit above a fixed
+/// home-button zone — screen content can never bleed into the button area.
 struct FullscreenSimView: View {
     @EnvironmentObject var sim: SimulatorState
 
+    // iPhone 16e: 390×844 pt (1170×2532 px @3x), notch up top.
+    private let homeZone: CGFloat = 112
+    private let topInset: CGFloat = 30
+
     var body: some View {
         GeometryReader { geo in
-            let scale = geo.size.width / 320
-            let contentHeight = 568 * scale
-            // Top inset for Dynamic Island / notch area.
-            let topInset: CGFloat = 28
+            let availH = max(geo.size.height - topInset - homeZone, 1)
+            let scale = min(geo.size.width / 320, availH / 568)
+            let sw = 320 * scale
+            let sh = 568 * scale
             ZStack {
                 // True black — blends into the OLED display.
                 Color.black
                     .ignoresSafeArea()
 
                 VStack(spacing: 0) {
-                    // Top black bar.
+                    // Top black bar (notch clearance).
                     Color.black
                         .frame(height: topInset)
 
-                    // The simulated iOS 6 screen, scaled to fill width.
+                    // The simulated iOS 6 screen, scaled to fit.
+                    // .topLeading anchor + matching frame alignment means the
+                    // rendered pixels exactly fill the frame — no drift.
                     ScreenHost()
                         .frame(width: 320, height: 568)
-                        .scaleEffect(scale, anchor: .top)
-                        .frame(width: geo.size.width, height: contentHeight)
+                        .scaleEffect(scale, anchor: .topLeading)
+                        .frame(width: sw, height: sh, alignment: .topLeading)
+                        .clipped()
 
                     // Bottom black area with visible home button.
                     ZStack {
@@ -121,7 +128,11 @@ struct FullscreenSimView: View {
                         }
                         .buttonStyle(.plain)
                     }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .frame(height: homeZone)
+
+                    // Any leftover strip (home-indicator area) stays black.
+                    Color.black
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
                 .ignoresSafeArea()
             }
