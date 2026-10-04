@@ -267,9 +267,8 @@ w("\t\t\tdefaultConfigurationName = Release;")
 w("\t\t};")
 w("/* End XCConfigurationList section */")
 w("")
-
+w("\t};")
 w("\trootObject = " + PID_PROJECT + " /* Project object */;")
-w("}")
 w("}")
 
 out = os.path.join(SRC, "iOS6Sim.xcodeproj", "project.pbxproj")
