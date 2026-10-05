@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net10.0-windows10.0.19041.0</TargetFrameworks>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>iOS6Sim.Windows</RootNamespace>
+    <UseMaui>true</UseMaui>
+    <SingleProject>true</SingleProject>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <WindowsPackageType>None</WindowsPackageType>
+    <ApplicationTitle>iOS 6 Simulator</ApplicationTitle>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Icon art: copy the 23 icon PNGs from the Mac
+         (~/Documents/ios6sim/iOS6Sim/IconArt/*/icon-*.png, flattened)
+         into Resources\Raw\ here, named icon-<id>.png. -->
+    <MauiAsset Include="Resources\Raw\*" />
+  </ItemGroup>
+
+</Project>
