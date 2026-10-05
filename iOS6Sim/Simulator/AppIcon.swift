@@ -14,14 +14,14 @@ struct iOS6Icon: View {
     private var assetName: String? {
         switch app {
         case .evasi0n, .cydia: return nil
-        default: return "icon-\(app.rawValue)"
+        default: return app.rawValue
         }
     }
 
     var body: some View {
         ZStack {
             if let name = assetName {
-                Image(name)
+                iconArtImage(named: name)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .saturation(1.08)
@@ -51,6 +51,42 @@ struct iOS6Icon: View {
         }
         .frame(width: size, height: size)
         .shadow(color: .black.opacity(0.35), radius: 3, y: 2)
+    }
+
+    /// Loads icon artwork from the IconArt folder reference, stripping the
+    /// embedded Display P3 color profile (the exports were tagged P3, which
+    /// iOS honors — crushing the colors; the pixel values are sRGB).
+    private func iconArtImage(named name: String) -> Image {
+        if let url = Bundle.main.url(forResource: "icon-\(name)", withExtension: "png", subdirectory: "IconArt/icon-\(name).imageset"),
+           let data = try? Data(contentsOf: url),
+           let uiImage = UIImage(data: stripICCP(from: data)) {
+            return Image(uiImage: uiImage)
+        }
+        return Image(systemName: "app")
+    }
+
+    /// Removes the iCCP chunk from PNG data so iOS treats it as sRGB.
+    private func stripICCP(from data: Data) -> Data {
+        guard data.count > 8,
+              data[0] == 0x89, data[1] == 0x50, data[2] == 0x4E, data[3] == 0x47,
+              data[4] == 0x0D, data[5] == 0x0A, data[6] == 0x1A, data[7] == 0x0A else {
+            return data
+        }
+        var out = Data(data.prefix(8))
+        var i = 8
+        while i + 12 <= data.count {
+            let len = (Int(data[i]) << 24) | (Int(data[i+1]) << 16) | (Int(data[i+2]) << 8) | Int(data[i+3])
+            guard len >= 0, i + 12 + len <= data.count else { break }
+            let t0 = data[i+4], t1 = data[i+5], t2 = data[i+6], t3 = data[i+7]
+            let isICCP = t0 == 0x69 && t1 == 0x43 && t2 == 0x43 && t3 == 0x50
+            let isIEND = t0 == 0x49 && t1 == 0x45 && t2 == 0x4E && t3 == 0x44
+            if !isICCP {
+                out.append(contentsOf: data[i..<(i+12+len)])
+            }
+            i += 12 + len
+            if isIEND { break }
+        }
+        return out.count > 8 ? out : data
     }
 
     private var drawnGradient: LinearGradient {
