@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="iOS6Sim.Windows.Views.SimulatorPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#0A0A0C">
+
+    <Grid>
+        <!-- Centered iPhone 5 -->
+        <VerticalStackLayout HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             Spacing="18">
+
+            <!-- Screen: 320×568 logical, rendered at 2x for crispness -->
+            <Frame x:Name="DeviceFrame"
+                   WidthRequest="360" HeightRequest="640"
+                   CornerRadius="36" Padding="0"
+                   BackgroundColor="Black" BorderColor="#2A2A2E"
+                   HasShadow="True">
+                <Grid>
+                    <!-- The simulated iPhone screen -->
+                    <ContentView x:Name="ScreenHost"
+                                 BackgroundColor="Black" />
+                </Grid>
+            </Frame>
+
+            <!-- Clickable home button -->
+            <Button x:Name="HomeButton" Clicked="OnHomeClicked"
+                    WidthRequest="56" HeightRequest="56"
+                    CornerRadius="28"
+                    BackgroundColor="#1A1A1E"
+                    BorderColor="#3A3A40" BorderWidth="2"
+                    Text="◻" FontSize="20" TextColor="#8E8E93"
+                    HorizontalOptions="Center" />
+        </VerticalStackLayout>
+
+        <!-- Multitasking switcher tray -->
+        <Frame x:Name="SwitcherTray" IsVisible="False"
+               BackgroundColor="#0A0A0CCC" CornerRadius="0"
+               Padding="0" HasShadow="False"
+               HorizontalOptions="Center" VerticalOptions="End"
+               WidthRequest="360" HeightRequest="140"
+               Margin="0,0,0,92">
+            <ScrollView Orientation="Horizontal">
+                <HorizontalStackLayout x:Name="SwitcherRow"
+                                       Spacing="16" Padding="16"
+                                       VerticalOptions="Center" />
+            </ScrollView>
+        </Frame>
+    </Grid>
+
+</ContentPage>
