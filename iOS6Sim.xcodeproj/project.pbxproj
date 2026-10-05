@@ -3,36 +3,74 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 56;
 	objects = {
+
+/* Begin PBXBuildFile section */
+		000000000000000000000065 /* iOS6SimApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000064 /* iOS6SimApp.swift */; };
+		000000000000000000000067 /* SimulatorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000066 /* SimulatorState.swift */; };
+		000000000000000000000069 /* Wallpapers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000068 /* Wallpapers.swift */; };
+		00000000000000000000006B /* AppIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000006A /* AppIcon.swift */; };
+		00000000000000000000006D /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000006C /* StatusBar.swift */; };
+		00000000000000000000006F /* LockScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000006E /* LockScreen.swift */; };
+		000000000000000000000071 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000070 /* HomeScreen.swift */; };
+		000000000000000000000073 /* DeviceFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000072 /* DeviceFrame.swift */; };
+		000000000000000000000075 /* NotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000074 /* NotesApp.swift */; };
+		000000000000000000000077 /* CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000076 /* CalculatorApp.swift */; };
+		000000000000000000000079 /* ClockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000078 /* ClockApp.swift */; };
+		00000000000000000000007B /* WeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000007A /* WeatherApp.swift */; };
+		00000000000000000000007D /* SettingsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000007C /* SettingsApp.swift */; };
+		00000000000000000000007F /* PhotosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000007E /* PhotosApp.swift */; };
+		000000000000000000000081 /* RemindersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000080 /* RemindersApp.swift */; };
+		000000000000000000000083 /* MessageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000082 /* MessageStore.swift */; };
+		000000000000000000000085 /* MessagesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000084 /* MessagesApp.swift */; };
+		000000000000000000000087 /* iOS6UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000086 /* iOS6UI.swift */; };
+		000000000000000000000089 /* StockApps1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000088 /* StockApps1.swift */; };
+		00000000000000000000008B /* StockApps2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000008A /* StockApps2.swift */; };
+		00000000000000000000008D /* StockApps3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000008C /* StockApps3.swift */; };
+		00000000000000000000008F /* StockApps4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000008E /* StockApps4.swift */; };
+		000000000000000000000095 /* IconArt in Resources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000094 /* IconArt */; };
+		000000000000000000000091 /* Jailbreak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000090 /* Jailbreak.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		000000000000000000000011 /* iOS 6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS 6.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		000000000000000000000012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		000000000000000000000064 /* iOS6SimApp.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "iOS6SimApp.swift"; sourceTree = "<group>"; };
-		000000000000000000000066 /* SimulatorState.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "SimulatorState.swift"; sourceTree = "<group>"; };
-		000000000000000000000068 /* Wallpapers.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "Wallpapers.swift"; sourceTree = "<group>"; };
-		00000000000000000000006A /* AppIcon.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "AppIcon.swift"; sourceTree = "<group>"; };
-		00000000000000000000006C /* StatusBar.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "StatusBar.swift"; sourceTree = "<group>"; };
-		00000000000000000000006E /* LockScreen.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "LockScreen.swift"; sourceTree = "<group>"; };
-		000000000000000000000070 /* HomeScreen.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "HomeScreen.swift"; sourceTree = "<group>"; };
-		000000000000000000000072 /* DeviceFrame.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "DeviceFrame.swift"; sourceTree = "<group>"; };
-		000000000000000000000074 /* iOS6UI.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "iOS6UI.swift"; sourceTree = "<group>"; };
-		000000000000000000000076 /* NotesApp.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "NotesApp.swift"; sourceTree = "<group>"; };
-		000000000000000000000078 /* CalculatorApp.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "CalculatorApp.swift"; sourceTree = "<group>"; };
-		00000000000000000000007A /* ClockApp.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "ClockApp.swift"; sourceTree = "<group>"; };
-		00000000000000000000007C /* WeatherApp.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "WeatherApp.swift"; sourceTree = "<group>"; };
-		00000000000000000000007E /* SettingsApp.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "SettingsApp.swift"; sourceTree = "<group>"; };
-		000000000000000000000080 /* PhotosApp.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "PhotosApp.swift"; sourceTree = "<group>"; };
-		000000000000000000000082 /* RemindersApp.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "RemindersApp.swift"; sourceTree = "<group>"; };
-		000000000000000000000084 /* StockApps1.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "StockApps1.swift"; sourceTree = "<group>"; };
-		000000000000000000000086 /* StockApps2.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "StockApps2.swift"; sourceTree = "<group>"; };
-		000000000000000000000088 /* StockApps3.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "StockApps3.swift"; sourceTree = "<group>"; };
-		00000000000000000000008A /* StockApps4.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "StockApps4.swift"; sourceTree = "<group>"; };
-		00000000000000000000008C /* Jailbreak.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "Jailbreak.swift"; sourceTree = "<group>"; };
-		00000000000000000000008E /* MessageStore.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "MessageStore.swift"; sourceTree = "<group>"; };
-		000000000000000000000090 /* MessagesApp.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "MessagesApp.swift"; sourceTree = "<group>"; };
-		000000000000000000000092 /* iOS6Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = iOS6Icons.xcassets; sourceTree = "<group>"; };
+		000000000000000000000064 /* iOS6SimApp.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = iOS6SimApp.swift; sourceTree = "<group>"; };
+		000000000000000000000066 /* SimulatorState.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = SimulatorState.swift; sourceTree = "<group>"; };
+		000000000000000000000068 /* Wallpapers.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Wallpapers.swift; sourceTree = "<group>"; };
+		00000000000000000000006A /* AppIcon.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = AppIcon.swift; sourceTree = "<group>"; };
+		00000000000000000000006C /* StatusBar.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
+		00000000000000000000006E /* LockScreen.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = LockScreen.swift; sourceTree = "<group>"; };
+		000000000000000000000070 /* HomeScreen.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		000000000000000000000072 /* DeviceFrame.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = DeviceFrame.swift; sourceTree = "<group>"; };
+		000000000000000000000074 /* NotesApp.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = NotesApp.swift; sourceTree = "<group>"; };
+		000000000000000000000076 /* CalculatorApp.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = CalculatorApp.swift; sourceTree = "<group>"; };
+		000000000000000000000078 /* ClockApp.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = ClockApp.swift; sourceTree = "<group>"; };
+		00000000000000000000007A /* WeatherApp.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = WeatherApp.swift; sourceTree = "<group>"; };
+		00000000000000000000007C /* SettingsApp.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = SettingsApp.swift; sourceTree = "<group>"; };
+		00000000000000000000007E /* PhotosApp.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = PhotosApp.swift; sourceTree = "<group>"; };
+		000000000000000000000080 /* RemindersApp.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = RemindersApp.swift; sourceTree = "<group>"; };
+		000000000000000000000082 /* MessageStore.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = MessageStore.swift; sourceTree = "<group>"; };
+		000000000000000000000084 /* MessagesApp.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = MessagesApp.swift; sourceTree = "<group>"; };
+		000000000000000000000086 /* iOS6UI.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = iOS6UI.swift; sourceTree = "<group>"; };
+		000000000000000000000088 /* StockApps1.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = StockApps1.swift; sourceTree = "<group>"; };
+		00000000000000000000008A /* StockApps2.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = StockApps2.swift; sourceTree = "<group>"; };
+		00000000000000000000008C /* StockApps3.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = StockApps3.swift; sourceTree = "<group>"; };
+		00000000000000000000008E /* StockApps4.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = StockApps4.swift; sourceTree = "<group>"; };
+		000000000000000000000094 /* IconArt */ = {isa = PBXFileReference; lastKnownFileType = folder; path = IconArt; sourceTree = "<group>"; };
+		000000000000000000000090 /* Jailbreak.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Jailbreak.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00000000000000000000000F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		000000000000000000000009 = {
@@ -58,7 +96,7 @@
 				000000000000000000000064 /* iOS6SimApp.swift */,
 				00000000000000000000000C /* Simulator */,
 				00000000000000000000000D /* Apps */,
-				000000000000000000000092 /* iOS6Icons.xcassets */,
+				000000000000000000000094 /* IconArt */,
 			);
 			path = iOS6Sim;
 			sourceTree = "<group>";
@@ -73,7 +111,7 @@
 				00000000000000000000006E /* LockScreen.swift */,
 				000000000000000000000070 /* HomeScreen.swift */,
 				000000000000000000000072 /* DeviceFrame.swift */,
-				000000000000000000000074 /* iOS6UI.swift */,
+				000000000000000000000086 /* iOS6UI.swift */,
 			);
 			path = Simulator;
 			sourceTree = "<group>";
@@ -81,20 +119,20 @@
 		00000000000000000000000D /* Apps */ = {
 			isa = PBXGroup;
 			children = (
-				000000000000000000000076 /* NotesApp.swift */,
-				000000000000000000000078 /* CalculatorApp.swift */,
-				00000000000000000000007A /* ClockApp.swift */,
-				00000000000000000000007C /* WeatherApp.swift */,
-				00000000000000000000007E /* SettingsApp.swift */,
-				000000000000000000000080 /* PhotosApp.swift */,
-				000000000000000000000082 /* RemindersApp.swift */,
-				000000000000000000000084 /* StockApps1.swift */,
-				000000000000000000000086 /* StockApps2.swift */,
-				000000000000000000000088 /* StockApps3.swift */,
-				00000000000000000000008A /* StockApps4.swift */,
-				00000000000000000000008C /* Jailbreak.swift */,
-				00000000000000000000008E /* MessageStore.swift */,
-				000000000000000000000090 /* MessagesApp.swift */,
+				000000000000000000000074 /* NotesApp.swift */,
+				000000000000000000000076 /* CalculatorApp.swift */,
+				000000000000000000000078 /* ClockApp.swift */,
+				00000000000000000000007A /* WeatherApp.swift */,
+				00000000000000000000007C /* SettingsApp.swift */,
+				00000000000000000000007E /* PhotosApp.swift */,
+				000000000000000000000080 /* RemindersApp.swift */,
+				000000000000000000000082 /* MessageStore.swift */,
+				000000000000000000000084 /* MessagesApp.swift */,
+				000000000000000000000088 /* StockApps1.swift */,
+				00000000000000000000008A /* StockApps2.swift */,
+				00000000000000000000008C /* StockApps3.swift */,
+				00000000000000000000008E /* StockApps4.swift */,
+				000000000000000000000090 /* Jailbreak.swift */,
 			);
 			path = Apps;
 			sourceTree = "<group>";
@@ -124,6 +162,8 @@
 /* Begin PBXProject section */
 		000000000000000000000001 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = 000000000000000000000003 /* Build configuration list for PBXProject "iOS6Sim" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
@@ -141,6 +181,17 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		000000000000000000000010 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000000000000000095 /* IconArt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		00000000000000000000000E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -154,73 +205,25 @@
 				00000000000000000000006F /* LockScreen.swift in Sources */,
 				000000000000000000000071 /* HomeScreen.swift in Sources */,
 				000000000000000000000073 /* DeviceFrame.swift in Sources */,
-				000000000000000000000075 /* iOS6UI.swift in Sources */,
-				000000000000000000000077 /* NotesApp.swift in Sources */,
-				000000000000000000000079 /* CalculatorApp.swift in Sources */,
-				00000000000000000000007B /* ClockApp.swift in Sources */,
-				00000000000000000000007D /* WeatherApp.swift in Sources */,
-				00000000000000000000007F /* SettingsApp.swift in Sources */,
-				000000000000000000000081 /* PhotosApp.swift in Sources */,
-				000000000000000000000083 /* RemindersApp.swift in Sources */,
-				000000000000000000000085 /* StockApps1.swift in Sources */,
-				000000000000000000000087 /* StockApps2.swift in Sources */,
-				000000000000000000000089 /* StockApps3.swift in Sources */,
-				00000000000000000000008B /* StockApps4.swift in Sources */,
-				00000000000000000000008D /* Jailbreak.swift in Sources */,
-				00000000000000000000008F /* MessageStore.swift in Sources */,
-				000000000000000000000091 /* MessagesApp.swift in Sources */,
+				000000000000000000000075 /* NotesApp.swift in Sources */,
+				000000000000000000000077 /* CalculatorApp.swift in Sources */,
+				000000000000000000000079 /* ClockApp.swift in Sources */,
+				00000000000000000000007B /* WeatherApp.swift in Sources */,
+				00000000000000000000007D /* SettingsApp.swift in Sources */,
+				00000000000000000000007F /* PhotosApp.swift in Sources */,
+				000000000000000000000081 /* RemindersApp.swift in Sources */,
+				000000000000000000000083 /* MessageStore.swift in Sources */,
+				000000000000000000000085 /* MessagesApp.swift in Sources */,
+				000000000000000000000087 /* iOS6UI.swift in Sources */,
+				000000000000000000000089 /* StockApps1.swift in Sources */,
+				00000000000000000000008B /* StockApps2.swift in Sources */,
+				00000000000000000000008D /* StockApps3.swift in Sources */,
+				00000000000000000000008F /* StockApps4.swift in Sources */,
+				000000000000000000000091 /* Jailbreak.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		00000000000000000000000F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXResourcesBuildPhase section */
-		000000000000000000000010 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				000000000000000000000093 /* iOS6Icons.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXBuildFile section */
-		000000000000000000000065 /* iOS6SimApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000064 /* iOS6SimApp.swift */; };
-		000000000000000000000067 /* SimulatorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000066 /* SimulatorState.swift */; };
-		000000000000000000000069 /* Wallpapers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000068 /* Wallpapers.swift */; };
-		00000000000000000000006B /* AppIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000006A /* AppIcon.swift */; };
-		00000000000000000000006D /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000006C /* StatusBar.swift */; };
-		00000000000000000000006F /* LockScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000006E /* LockScreen.swift */; };
-		000000000000000000000071 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000070 /* HomeScreen.swift */; };
-		000000000000000000000073 /* DeviceFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000072 /* DeviceFrame.swift */; };
-		000000000000000000000075 /* iOS6UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000074 /* iOS6UI.swift */; };
-		000000000000000000000077 /* NotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000076 /* NotesApp.swift */; };
-		000000000000000000000079 /* CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000078 /* CalculatorApp.swift */; };
-		00000000000000000000007B /* ClockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000007A /* ClockApp.swift */; };
-		00000000000000000000007D /* WeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000007C /* WeatherApp.swift */; };
-		00000000000000000000007F /* SettingsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000007E /* SettingsApp.swift */; };
-		000000000000000000000081 /* PhotosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000080 /* PhotosApp.swift */; };
-		000000000000000000000083 /* RemindersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000082 /* RemindersApp.swift */; };
-		000000000000000000000085 /* StockApps1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000084 /* StockApps1.swift */; };
-		000000000000000000000087 /* StockApps2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000086 /* StockApps2.swift */; };
-		000000000000000000000089 /* StockApps3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000088 /* StockApps3.swift */; };
-		00000000000000000000008B /* StockApps4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000008A /* StockApps4.swift */; };
-		00000000000000000000008D /* Jailbreak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000008C /* Jailbreak.swift */; };
-		00000000000000000000008F /* MessageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000008E /* MessageStore.swift */; };
-		000000000000000000000091 /* MessagesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000090 /* MessagesApp.swift */; };
-		000000000000000000000093 /* iOS6Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000092 /* iOS6Icons.xcassets */; };
-/* End PBXBuildFile section */
 
 /* Begin XCBuildConfiguration section */
 		000000000000000000000005 /* Debug */ = {
@@ -240,33 +243,35 @@
 		000000000000000000000007 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = "iOS6Sim/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.emckeon97.iOS6Sim";
-				PRODUCT_NAME = "iOS 6";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				CODE_SIGN_STYLE = Automatic;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RZ8U8SFTCC;
+				INFOPLIST_FILE = iOS6Sim/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emckeon97.iOS6Sim;
+				PRODUCT_NAME = "iOS 6";
+				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		000000000000000000000008 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = "iOS6Sim/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.emckeon97.iOS6Sim";
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RZ8U8SFTCC;
+				INFOPLIST_FILE = iOS6Sim/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emckeon97.iOS6Sim;
 				PRODUCT_NAME = "iOS 6";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				TARGETED_DEVICE_FAMILY = 1;
-				CODE_SIGN_STYLE = Automatic;
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 			};
 			name = Release;
 		};
@@ -292,7 +297,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
 	};
 	rootObject = 000000000000000000000001 /* Project object */;
 }
