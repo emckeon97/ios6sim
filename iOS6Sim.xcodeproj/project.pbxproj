@@ -31,6 +31,7 @@
 		00000000000000000000008C /* Jailbreak.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "Jailbreak.swift"; sourceTree = "<group>"; };
 		00000000000000000000008E /* MessageStore.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "MessageStore.swift"; sourceTree = "<group>"; };
 		000000000000000000000090 /* MessagesApp.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = "MessagesApp.swift"; sourceTree = "<group>"; };
+		000000000000000000000092 /* iOS6Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = iOS6Icons.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -57,6 +58,7 @@
 				000000000000000000000064 /* iOS6SimApp.swift */,
 				00000000000000000000000C /* Simulator */,
 				00000000000000000000000D /* Apps */,
+				000000000000000000000092 /* iOS6Icons.xcassets */,
 			);
 			path = iOS6Sim;
 			sourceTree = "<group>";
@@ -187,6 +189,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				000000000000000000000093 /* iOS6Icons.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +219,7 @@
 		00000000000000000000008D /* Jailbreak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000008C /* Jailbreak.swift */; };
 		00000000000000000000008F /* MessageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000008E /* MessageStore.swift */; };
 		000000000000000000000091 /* MessagesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000090 /* MessagesApp.swift */; };
+		000000000000000000000093 /* iOS6Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000092 /* iOS6Icons.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin XCBuildConfiguration section */
